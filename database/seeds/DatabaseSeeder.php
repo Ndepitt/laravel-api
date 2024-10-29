@@ -1,17 +1,18 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeder;
 
 use Illuminate\Database\Seeder;
-use Database\Seeders\AuthorSeeder;
-use Database\Seeders\BookSeeder;
 
-class DatabaseSeeder extends Seeder
+class  DatabaseSeeder extends Seeder
+
 {
-    public function run(){
-        $this->call([
-            AuthorSeeder::class,
-            BookSeeder::class,
+    public function run()
+    {
+        $this ->call([
+
         ]);
+
     }
+
 }
