@@ -1,9 +1,11 @@
 <?php
-use App\book;
-use App\authors;
+namespace Database\Seeder;
+
+use App\Authors;
+use App\Book;
 use Illuminate\Database\Seeder;
 
-class bookseeder extends Seeder
+class BookSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,15 +14,14 @@ class bookseeder extends Seeder
      */
     public function run()
     {
-        $authors = authors::all();
+        $authors = Authors::all();
         
-        for($i= 1; $i <= 10; $i++) {
-            book::create([
+        for($i = 1; $i <= 10; $i++) {
+            Book::create([
                 'title' => 'Book Title ' . $i,
                 'author_id' => $authors->random()->id,
                 'published_year' => rand(2000, 2023),
             ]);
         }
-        
     }
 }
