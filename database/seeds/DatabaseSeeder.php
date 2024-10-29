@@ -9,12 +9,11 @@ class  DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        $this ->call([
+        $this->call([
             AuthorSeeder::class,
             BookSeeder::class,
 
+
         ]);
-
     }
-
 }
